@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aperture & Monolith — Architectural Showcase | Opus + Higgsfield Concept</title>
+  <meta name="description" content="Cinematic architectural slider inspired by the viral Opus 5.5 + Higgsfield AI web design concept.">
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Custom Smooth Follow Cursor -->
+  <div class="custom-cursor" id="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring">
+      <span class="cursor-text" id="cursorText">DRAG</span>
+    </div>
+  </div>
+
+  <!-- Background Ambient Glow -->
+  <div class="ambient-glow" id="ambientGlow"></div>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-monogram">W</span>
+      <div class="brand-text">
+        <span class="brand-title">WE ARE BRAND</span>
+        <span class="brand-subtitle">OPUS 5.5 × HIGGSFIELD AI</span>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="pill-badge">
+        <span class="live-dot"></span>
+        <span>CONCEPT 2026 // ONE-PROMPT BUILD</span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button class="hud-btn" id="audioToggle" aria-label="Toggle ambient sound">
+        <div class="equalizer-bars">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <span class="btn-text">AMBIENCE</span>
+      </button>
+
+      <button class="hud-btn prompt-trigger" id="promptBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        </svg>
+        <span>PROMPT HUD</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Showcase Slider Viewport -->
+  <main class="slider-wrapper" id="sliderWrapper">
+    <!-- Big Ghost Numbers in Background -->
+    <div class="ghost-number" id="ghostNumber" aria-hidden="true">01</div>
+
+    <!-- The Slide Stage -->
+    <div class="slides-stage" id="slidesStage">
+      
+      <!-- Slide 1: The Manhattan Penthouse Aperture (Direct from Reel) -->
+      <article class="slide active" data-index="0" data-theme="#d97736" data-coords="40.7484° N, 73.9857° W" data-tag="MONOLITH 01 // NYC">
+        <div class="slide-inner">
+          <div class="aperture-frame">
+            <div class="image-mask">
+              <img src="assets/slide1.jpg" alt="Two executives sitting in high penthouse terrace framing the Empire State Building" class="slide-image" draggable="false">
+              <div class="image-overlay"></div>
+              <div class="architectural-sun-slice"></div>
+            </div>
+            <div class="frame-corners">
+              <span class="corner top-left"></span>
+              <span class="corner top-right"></span>
+              <span class="corner bottom-left"></span>
+              <span class="corner bottom-right"></span>
+            </div>
+          </div>
+
+          <div class="slide-content">
+            <div class="content-meta">
+              <span class="meta-tag">TERRACCE SUITE · HUDSON REACH</span>
+              <span class="meta-coords">40.7484° N, 73.9857° W</span>
+            </div>
+            <h1 class="slide-title">
+              <span class="title-line">THE APERTURE</span>
+              <span class="title-sub">PENTHOUSE HORIZON</span>
+            </h1>
+            <p class="slide-desc">
+              Geometric terracotta monoliths framing the Manhattan skyline. Sculptural shadows cut diagonally across polished teak and bronze light fixtures.
+            </p>
+            <div class="slide-stats">
+              <div class="stat">
+                <span class="stat-value">8,450</span>
+                <span class="stat-label">SQ. FT. CANTILEVER</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value">1,120 FT</span>
+                <span class="stat-label">ELEVATION</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value">3200K</span>
+                <span class="stat-label">AMBER ILLUMINATION</span>
+              </div>
+            </div>
+            <div class="slide-cta-row">
+              <button class="primary-cta">
+                <span>EXPLORE SANCTUARY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+              <button class="secondary-cta" data-action="view-specs">VIEW ARCHITECTURE</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 2: Travertine Horizon Villa -->
+      <article class="slide next" data-index="1" data-theme="#3b82f6" data-coords="34.0259° N, 118.7798° W" data-tag="MONOLITH 02 // PACIFIC">
+        <div class="slide-inner">
+          <div class="aperture-frame">
+            <div class="image-mask">
+              <img src="assets/slide2.jpg" alt="Modernist luxury architectural villa overlooking ocean horizon" class="slide-image" draggable="false">
+              <div class="image-overlay"></div>
+              <div class="architectural-sun-slice"></div>
+            </div>
+            <div class="frame-corners">
+              <span class="corner top-left"></span>
+              <span class="corner top-right"></span>
+              <span class="corner bottom-left"></span>
+              <span class="corner bottom-right"></span>
+            </div>
+          </div>
+
+          <div class="slide-content">
+            <div class="content-meta">
+              <span class="meta-tag">COASTAL CLIFFS · MALIBU</span>
+              <span class="meta-coords">34.0259° N, 118.7798° W</span>
+            </div>
+            <h1 class="slide-title">
+              <span class="title-line">VILLA HORIZONTE</span>
+              <span class="title-sub">TRAVERTINE SANCTUARY</span>
+            </h1>
+            <p class="slide-desc">
+              Cantilevered Roman travertine floating above sea mist. Floor-to-ceiling frameless glass boundaries dissolving interior life into the infinite Pacific blue.
+            </p>
+            <div class="slide-stats">
+              <div class="stat">
+                <span class="stat-value">12,200</span>
+                <span class="stat-label">LIVING VOLUME</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value">ZERO</span>
+                <span class="stat-label">CARBON FOOTPRINT</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value">180°</span>
+                <span class="stat-label">OCEAN PANORAMA</span>
+              </div>
+            </div>
+            <div class="slide-cta-row">
+              <button class="primary-cta">
+                <span>EXPLORE SANCTUARY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+              <button class="secondary-cta" data-action="view-specs">VIEW ARCHITECTURE</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3: Desert Brutalist Pavilion -->
+      <article class="slide" data-index="2" data-theme="#eab308" data-coords="36.1699° N, 115.1398° W" data-tag="MONOLITH 03 // MOJAVE">
+        <div class="slide-inner">
+          <div class="aperture-frame">
+            <div class="image-mask">
+              <img src="assets/slide3.jpg" alt="Travertine glass pavilion surrounded by desert mountains" class="slide-image" draggable="false">
+              <div class="image-overlay"></div>
+              <div class="architectural-sun-slice"></div>
+            </div>
+            <div class="frame-corners">
+              <span class="corner top-left"></span>
+              <span class="corner top-right"></span>
+              <span class="corner bottom-left"></span>
+              <span class="corner bottom-right"></span>
+            </div>
+          </div>
+
+          <div class="slide-content">
+            <div class="content-meta">
+              <span class="meta-tag">BASALT & GLASS · MOJAVE</span>
+              <span class="meta-coords">36.1699° N, 115.1398° W</span>
+            </div>
+            <h1 class="slide-title">
+              <span class="title-line">SOLARIS PAVILION</span>
+              <span class="title-sub">DESERT MONOLITH</span>
+            </h1>
+            <p class="slide-desc">
+              Poured rammed earth, basalt stone and precision glass reflecting the dunes. Sculpted to withstand desert extremes through passive subterranean cooling.
+            </p>
+            <div class="slide-stats">
+              <div class="stat">
+                <span class="stat-value">6,800</span>
+                <span class="stat-label">SQ. FT. COMPOUND</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value">PASSIVE</span>
+                <span class="stat-label">THERMAL MASS</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">OFF-GRID SOLAR</span>
+              </div>
+            </div>
+            <div class="slide-cta-row">
+              <button class="primary-cta">
+                <span>EXPLORE SANCTUARY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+              <button class="secondary-cta" data-action="view-specs">VIEW ARCHITECTURE</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 4: Nordic Concrete Sanctuary -->
+      <article class="slide" data-index="3" data-theme="#10b981" data-coords="60.1699° N, 24.9384° E" data-tag="MONOLITH 04 // FJORD">
+        <div class="slide-inner">
+          <div class="aperture-frame">
+            <div class="image-mask">
+              <img src="assets/slide4.jpg" alt="Minimalist concrete and dark timber architectural sanctuary" class="slide-image" draggable="false">
+              <div class="image-overlay"></div>
+              <div class="architectural-sun-slice"></div>
+            </div>
+            <div class="frame-corners">
+              <span class="corner top-left"></span>
+              <span class="corner top-right"></span>
+              <span class="corner bottom-left"></span>
+              <span class="corner bottom-right"></span>
+            </div>
+          </div>
+
+          <div class="slide-content">
+            <div class="content-meta">
+              <span class="meta-tag">PINEWOOD & STONE · ARCHIPELAGO</span>
+              <span class="meta-coords">60.1699° N, 24.9384° E</span>
+            </div>
+            <h1 class="slide-title">
+              <span class="title-line">FJORD ATELIER</span>
+              <span class="title-sub">SILENT MONASTERY</span>
+            </h1>
+            <p class="slide-desc">
+              Board-formed raw concrete nestled into bedrock granite. Skylights frame the northern twilight while blackened timber wings offer serene seclusion.
+            </p>
+            <div class="slide-stats">
+              <div class="stat">
+                <span class="stat-value">9,100</span>
+                <span class="stat-label">TOTAL FOOTPRINT</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value">TRIPLE</span>
+                <span class="stat-label">GLAZED APERTURE</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-value">GEOTHERM</span>
+                <span class="stat-label">HEATED SLAB</span>
+              </div>
+            </div>
+            <div class="slide-cta-row">
+              <button class="primary-cta">
+                <span>EXPLORE SANCTUARY</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+              <button class="secondary-cta" data-action="view-specs">VIEW ARCHITECTURE</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Drag / Swipe Velocity Indicator Track -->
+    <div class="drag-track-indicator" id="dragIndicator">
+      <span class="drag-hint">DRAG TO NAVIGATE</span>
+      <div class="drag-meter">
+        <div class="meter-bar" id="meterBar"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bottom Navigation & Controls Dock -->
+  <footer class="slider-dock">
+    <!-- Left: Slide Index & Radial Progress -->
+    <div class="dock-left">
+      <div class="progress-ring-container">
+        <svg class="progress-ring" width="56" height="56">
+          <circle class="ring-bg" cx="28" cy="28" r="24"/>
+          <circle class="ring-fg" id="progressCircle" cx="28" cy="28" r="24"/>
+        </svg>
+        <div class="ring-number">
+          <span class="cur-idx" id="currentSlideDisplay">01</span>
+        </div>
+      </div>
+      <div class="index-meta">
+        <span class="total-count">/ 04</span>
+        <span class="category-name" id="categoryName">THE APERTURE</span>
+      </div>
+    </div>
+
+    <!-- Center: Linear Scrubber Timeline -->
+    <div class="dock-center">
+      <div class="timeline-bar" id="timelineBar" role="slider" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1" tabindex="0">
+        <div class="timeline-segment active" data-slide="0"><span class="seg-fill"></span></div>
+        <div class="timeline-segment" data-slide="1"><span class="seg-fill"></span></div>
+        <div class="timeline-segment" data-slide="2"><span class="seg-fill"></span></div>
+        <div class="timeline-segment" data-slide="3"><span class="seg-fill"></span></div>
+      </div>
+      <div class="playback-controls">
+        <button class="play-pause-btn" id="playPauseBtn" aria-label="Pause Autoplay">
+          <svg class="icon-pause" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="4" width="4" height="16"/>
+            <rect x="14" y="4" width="4" height="16"/>
+          </svg>
+          <svg class="icon-play" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+        </button>
+        <span class="autoplay-label" id="autoplayLabel">AUTOPLAY 6S</span>
+      </div>
+    </div>
+
+    <!-- Right: Next/Prev Arrows & Interactive Mini Thumbnails Rail -->
+    <div class="dock-right">
+      <div class="nav-arrows">
+        <button class="arrow-btn prev-btn" id="prevBtn" aria-label="Previous Slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="arrow-btn next-btn" id="nextBtn" aria-label="Next Slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Thumbnail Strip -->
+      <div class="mini-thumbnails">
+        <button class="thumb-item active" data-index="0" aria-label="Slide 1 thumbnail">
+          <img src="assets/slide1.jpg" alt="Slide 1 thumbnail">
+        </button>
+        <button class="thumb-item" data-index="1" aria-label="Slide 2 thumbnail">
+          <img src="assets/slide2.jpg" alt="Slide 2 thumbnail">
+        </button>
+        <button class="thumb-item" data-index="2" aria-label="Slide 3 thumbnail">
+          <img src="assets/slide3.jpg" alt="Slide 3 thumbnail">
+        </button>
+        <button class="thumb-item" data-index="3" aria-label="Slide 4 thumbnail">
+          <img src="assets/slide4.jpg" alt="Slide 4 thumbnail">
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Drawer Modal: Opus 5.5 + Higgsfield AI Generation Prompt & Specs -->
+  <aside class="prompt-drawer" id="promptDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-title-group">
+          <span class="drawer-tag">AI GENERATION BLUEPRINT</span>
+          <h2 class="drawer-heading">Opus 5.5 + Higgsfield AI</h2>
+        </div>
+        <button class="drawer-close" id="drawerClose" aria-label="Close modal">×</button>
+      </div>
+
+      <div class="drawer-body">
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="icon">✨</span>
+            <span class="spec-title">THE PROMPT USED IN THE REEL</span>
+            <button class="copy-prompt-btn" id="copyPromptBtn">COPY</button>
+          </div>
+          <pre class="prompt-code-block" id="promptText">What if building a website could start with just one prompt?
+
+Build an ultra-luxurious, cinematic architectural showcase for a high-end design atelier named "WE ARE BRAND". 
+Featured Scene: Two executives seated in low-profile minimalist black armchairs within an expansive penthouse terrace. The terrace walls are textured ochre and burnt terracotta with a razor-sharp geometric shadow cut across the floor. An oversized glowing amber rectangular canopy illuminates the ceiling, while a monumental architectural aperture frames the Empire State Building and Manhattan skyline during golden hour.
+
+Interface requirements:
+- Immersive split-aperture carousel with parallax perspective
+- Physics-based smooth drag and swipe inertia
+- Dynamic ambient lighting color shifts matching each scene
+- Monolithic typography, coordinates HUD, and interactive specs
+- Seamless audio-reactive ambient cues</pre>
+        </div>
+
+        <div class="workflow-grid">
+          <div class="workflow-item">
+            <div class="workflow-badge">STEP 01</div>
+            <h3>Higgsfield AI Generative Asset</h3>
+            <p>Generates high-resolution cinematic architectural visuals with realistic lighting, volumetric fog, and camera apertures.</p>
+          </div>
+          <div class="workflow-item">
+            <div class="workflow-badge">STEP 02</div>
+            <h3>Opus 5.5 Architecture & Code</h3>
+            <p>Translates visual storytelling into modular HTML5, modern CSS custom properties, and 60fps JavaScript animation curves.</p>
+          </div>
+          <div class="workflow-item">
+            <div class="workflow-badge">STEP 03</div>
+            <h3>Micro-Interactions & Physics</h3>
+            <p>Equips the UI with custom cursor physics, inertia sliding, radial timeline progress, and interactive spatial audio.</p>
+          </div>
+        </div>
+
+        <div class="specs-table">
+          <div class="spec-row">
+            <span class="spec-key">Core Model</span>
+            <span class="spec-val">Claude Opus 5.5 via Higgsfield Supercomputer</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Visual Engine</span>
+            <span class="spec-val">Higgsfield Image-to-Video & Motion Suite</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Lighting Atmosphere</span>
+            <span class="spec-val">Ochre Terracotta / 3200K Amber Sunset</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Camera / Lens</span>
+            <span class="spec-val">35mm Anamorphic, f/2.8, Deep Depth-of-Field</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Script -->
+  <script src="slider.js"></script>
+</body>
+</html>
